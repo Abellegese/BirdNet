@@ -67,6 +67,27 @@ python evaluate.py --model_path "path/to/saved_model" --audio_file "path/to/audi
 - `--audio_file`: Path to the audio file to be evaluated.
 - `--output_file`: Path to save the predictions CSV file.
 
+### visualize
+
+Visualizes spectrograms of audio signals with their corresponding labels.
+
+## Usage
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from bird_classifier.utils import audio_to_spectrogram, visualize
+
+# Example usage of audio_to_spectrogram
+# Load audio data...
+spectrogram = audio_to_spectrogram(audio)
+
+# Example usage of visualize
+# Define signals, labels, Y, row, col...
+visualize(signals, labels, Y, row, col)
+
+
+
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug fixes, please open an issue or submit a pull request.
