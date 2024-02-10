@@ -35,7 +35,8 @@ python train.py --epochs 10 --batch_size 64 --validation_split 0.1 --new_example
 You can also use the Python API to train your model programmatically. Here's an example:
 
 ```python
-from audio_evaluation_pipeline import TrainerPipeline, Dataset
+from train import TrainerPipeline
+from dataset import Dataset
 
 # Initialize TrainerPipeline
 trainer = TrainerPipeline()
