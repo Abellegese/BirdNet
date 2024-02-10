@@ -12,11 +12,10 @@ Bird classification is a challenging task due to the diverse range of bird speci
 
 In this project, we use deep learning techniques to automate the process of feature extraction and classification. Convolutional neural networks (CNNs) have shown remarkable success in various audio classification tasks, including speech recognition and music classification. We apply similar techniques to the task of bird classification, leveraging the spectral patterns present in bird vocalizations.
 
+
+## Model
+<img src="vgg16_xml.jpg">
 ## Getting Started
-
-
-
-
 
 ## Usage
 
