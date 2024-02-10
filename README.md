@@ -6,7 +6,11 @@
 
 ## Introduction
 
-BirdNet is a library that provides a data preprocessing, model development, training and analysis tools. It aims to provide a state of the art bird classifier models for the community.
+This project is a bird classifier built using deep learning techniques. The classifier is trained on audio recordings of bird sounds to predict the species of birds present in the recordings. It leverages the power of convolutional neural networks (CNNs) to automatically learn features from the audio spectrograms and make accurate predictions.
+
+Bird classification is a challenging task due to the diverse range of bird species and the variability in their vocalizations. Traditional methods of bird classification rely on manual feature engineering and classification algorithms, which can be time-consuming and may not generalize well to unseen data.
+
+In this project, we use deep learning techniques to automate the process of feature extraction and classification. Convolutional neural networks (CNNs) have shown remarkable success in various audio classification tasks, including speech recognition and music classification. We apply similar techniques to the task of bird classification, leveraging the spectral patterns present in bird vocalizations.
 
 ## Getting Started
 
