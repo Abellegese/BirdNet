@@ -50,21 +50,6 @@ X_train, y_train = dataset.preprocess(new_example=True, quantity=[100, 200])
 trainer.train_model(X_train, y_train, epochs=10, validation_split=0.1, batch_size=64)
 ```
 
-
-#### Training the Model
-
-To train your model using the CLI, you can use the `train.py` script with the following options:
-
-```bash
-python train.py --epochs 10 --batch_size 64 --validation_split 0.1 --new_example True --quantity 100 200
-```
-
-- `--epochs`: Number of epochs for training (default: 5).
-- `--batch_size`: Batch size for training (default: 32).
-- `--validation_split`: Validation split ratio (default: 0.2).
-- `--new_example`: Whether to generate new examples (default: True).
-- `--quantity`: Quantity of new examples to generate (default: [100, 200]).
-
 #### Evaluating Audio Files
 
 To evaluate audio files using the trained model, you can use the `evaluate.py` script with the following options:
