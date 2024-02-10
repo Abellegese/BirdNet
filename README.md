@@ -35,11 +35,11 @@ python train.py --epochs 10 --batch_size 64 --validation_split 0.1 --new_example
 You can also use the Python API to train your model programmatically. Here's an example:
 
 ```python
-from train import TrainerPipeline
+from train import Trainer
 from dataset import Dataset
 
-# Initialize TrainerPipeline
-trainer = TrainerPipeline()
+# Initialize Trainer Pipeline
+trainer = Trainer()
 
 # Load data using Dataset class
 dataset = Dataset(X, y)  # Replace X and y with your actual data
