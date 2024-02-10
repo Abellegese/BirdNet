@@ -85,6 +85,7 @@ spectrogram = audio_to_spectrogram(audio)
 # Example usage of visualize
 # Define signals, labels, Y, row, col...
 visualize(signals, labels, Y, row, col)
+```
 
 
 
