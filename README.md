@@ -1,4 +1,4 @@
-<img src="https://happymag.tv/wp-content/uploads/2020/04/Webp.net-resizeimage-9-2.jpg" height=400px; width=800px>
+<img src="https://happymag.tv/wp-content/uploads/2020/04/Webp.net-resizeimage-9-2.jpg" height=300px; width=800px>
 
 ## BirdNet: Bird Voice CLassifier
 
