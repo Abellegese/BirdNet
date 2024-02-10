@@ -4,4 +4,7 @@
 
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
+### Introduction
+
 BirdNet is a library that provides a data preprocessing, model development, training and analysis tools. It aims to provide a state of the art bird classifier models for the community.
+
