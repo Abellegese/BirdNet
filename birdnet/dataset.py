@@ -1,6 +1,33 @@
 import numpy as np
 from abc import ABC, abstractmethod
 from utils import *
+from dataclasses import dataclass
+from preprocessing import *
+
+
+
+@dataclass
+class DataParameters:
+    """
+    A class that defines a set of parameters for data processing and analysis.
+    """
+    positive_class: list[str] = ['gibbon']
+    negative_class: list[str] = ['no-gibbon']
+    lowpass_cutoff: int = 2000
+    downsample_rate: int = 4800
+    nyquist_rate: int = 2400
+    segment_duration: int = 4
+    n_fft: int = 1024
+    hop_length: int = 256
+    n_mels: int = 128
+    f_min: int = 4000
+    f_max: int = 9000
+    species_folder: str = '.'
+    file_type: str = 'svl'
+    audio_extension: str = '.wav'
+
+
+
 class DatasetBase(ABC):
     def __init__(self, X, y):
         """
@@ -13,7 +40,7 @@ class DatasetBase(ABC):
         self.X = X
         self.y = y
         self.new_presence = []
-        self.new_absence = []
+        self.new_absence  = []
 
     @abstractmethod
     def preprocess(self, new_example=True, quantity=[100, 200]):
@@ -80,15 +107,33 @@ class DatasetBase(ABC):
 
 class Dataset(DatasetBase):
     def __init__(self, X, y):
+
         self.X = X
         self.y = y
         self.new_presence = []
         self.new_absence = []
+    
+    def extract(self, path):
+        with zipfile.ZipFile(path, 'r') as zip_file:
+            zip_file.extractall()
+    def create_dataset(self):
+        pre_pro = Preprocessing(species_folder, lowpass_cutoff,
+                downsample_rate, nyquist_rate,
+                segment_duration,
+                positive_class, negative_class,n_fft,
+                hop_length, n_mels, f_min, f_max, file_type,
+                audio_extension)
+
+        self.X, self.y = pre_pro.create_dataset(False)
+
+        # We save the pickle X and y variables to disk so that we don't have to
+        # pre-process the data everytime we want to train a model
+        pre_pro.save_data_to_pickle(X, Y)
 
     def _augment_clip(self, signal, minm=10, maxm=40):
         """
         Clipping Distortion: Augmentation
-        =================================
+
         The percentage of points that will be clipped is drawn from a uniform distribution between
         the two input parameters min_percentile_threshold and max_percentile_threshold. If for instance
         30% is drawn, the samples are clipped if they're below the 15th or above the 85th percentile.
@@ -102,7 +147,7 @@ class Dataset(DatasetBase):
     def _polarity_inversion(self, audio):
         """
         Polarity Inversion: Augmentation
-        ================================
+
         The function to reverse all the the data upside down
 
         Return the negative of the original data. Its importance is reflected on the above sections
@@ -111,7 +156,7 @@ class Dataset(DatasetBase):
     def preprocess(self, new_exmple=True, quantity=[100, 200]):
         """
         Function to preprocess the data
-        ===============================
+
         This include new example creation, augmentation and normilization
         """
         # If genearate the new example is "True" and append them to original data

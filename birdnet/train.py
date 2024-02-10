@@ -37,7 +37,7 @@ class BaseTrainer(ABC):
         """
         pass
 
-class TrainerPipeline:
+class Trainer(BaseTrainer):
     """
     A Training Pipeline class for training and visualizing deep learning models.
     """
