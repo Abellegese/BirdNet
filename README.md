@@ -35,7 +35,7 @@ python train.py --epochs 10 --batch_size 64 --validation_split 0.1 --new_example
 
 ### Python API
 
-You can also use the Python API to train your model programmatically. Here's an example:
+You can also use the Python API to train your model programmatically. 
 
 ```python
 from train import Trainer
@@ -77,12 +77,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from bird_classifier.utils import audio_to_spectrogram, visualize
 
-# Example usage of audio_to_spectrogram
 # Load audio data...
 spectrogram = audio_to_spectrogram(audio)
-
-# Example usage of visualize
-# Define signals, labels, Y, row, col...
 visualize(signals, labels, Y, row, col)
 ```
 
@@ -98,6 +94,4 @@ Contributions are welcome! If you have any ideas, suggestions, or bug fixes, ple
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
-Make sure to replace placeholders like `your-username`, `your-repo`, `train.py`, `audio-evaluation-pipeline`, `X`, `y`, etc., with actual values specific to your project.
