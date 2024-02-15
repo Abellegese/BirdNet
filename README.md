@@ -87,6 +87,9 @@ visualize(signals, labels, Y, row, col)
 ```
 
 
+## Acknowledgments
+
+- Parts of the code in this repository were adapted from [Emmanuel Dufourq's GitHub repository](https://github.com/emmanueldufourq).
 
 ## Contributing
 
