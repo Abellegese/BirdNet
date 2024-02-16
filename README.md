@@ -77,7 +77,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from bird_classifier.utils import audio_to_spectrogram, visualize
 
-# Load audio data...
+# Load audio data
+# Y: The training data
+# label: the index of the positive and negative class [[pos1, pos2],[neg1, neg2]]
+# row and col: the size of the figure
 spectrogram = audio_to_spectrogram(audio)
 visualize(signals, labels, Y, row, col)
 ```
