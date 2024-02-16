@@ -66,6 +66,12 @@ python evaluate.py --model_path "path/to/saved_model" --audio_file "path/to/audi
 - `--audio_file`: Path to the audio file to be evaluated.
 - `--output_file`: Path to save the predictions CSV file.
 
+### Dataset
+The dataset consists of audio recordings collected from Intaka Island, Cape Town, South Africa, for training a convolutional neural network (CNN)-based bird classifier. Recordings were gathered by placing audio recorders in various habitats across the island, for almost 5 hours.  In total, around 4 additional hours of recordings were obtained. Most recordings used a sampling rate of 48,000 Hz to capture sound details.
+
+Link: https://doi.org/10.5281/zenodo.10659537
+
+
 ### visualize
 
 Visualizes spectrograms of audio signals with their corresponding labels.
