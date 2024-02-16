@@ -15,6 +15,7 @@ In this project, we use deep learning techniques to automate the process of feat
 
 ## Model
 <img src="vgg16_xml.jpg" height=300px>
+
 ## Getting Started
 
 ## Usage
