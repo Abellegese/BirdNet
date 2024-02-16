@@ -31,7 +31,7 @@ python train.py --epochs 10 --batch_size 64 --validation_split 0.1 --new_example
 - `--batch_size`: Batch size for training (default: 32).
 - `--validation_split`: Validation split ratio (default: 0.2).
 - `--new_example`: Whether to generate new examples (default: True).
-- `--quantity`: Quantity of new examples to generate (default: [100, 200]).
+- `--quantity`: Quantity of new examples to generate (default: [100, 200]). But the choice is fully upto the users. If you need balanced dataset put the quantity that can make both the positive and negative example equal.
 
 ### Python API
 
