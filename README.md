@@ -91,7 +91,8 @@ from bird_classifier.utils import audio_to_spectrogram, visualize
 spectrogram = audio_to_spectrogram(audio)
 visualize(signals, labels, Y, row, col)
 ```
-
+### Report 
+The report paper can be found https://github.com/Abellegese/BirdNet/blob/main/example/abellegese_DL4E_Assignment_2.pdf
 
 ## Acknowledgments
 
