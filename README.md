@@ -39,8 +39,8 @@ python train.py --epochs 10 --batch_size 64 --validation_split 0.1 --new_example
 You can also use the Python API to train your model programmatically. 
 
 ```python
-from train import Trainer
-from dataset import Dataset
+from birdnet.train import Trainer
+from birdnet.dataset import Dataset
 
 # Initialize Trainer Pipeline
 trainer = Trainer()
