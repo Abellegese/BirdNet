@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from scipy import signal
 import librosa
-
+import click
 class BaseEvaluation(ABC):
     """
     Base class for evaluation pipelines.
