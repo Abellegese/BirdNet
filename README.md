@@ -57,10 +57,10 @@ trainer.train_model(X_train, y_train, epochs=10, validation_split=0.1, batch_siz
 
 #### Evaluating Audio Files
 
-To evaluate audio files using the trained model, you can use the `evaluate.py` script with the following options:
+To evaluate audio files using the trained model, you can use the `predict.py` script with the following options:
 
 ```bash
-python evaluate.py --model_path "path/to/saved_model" --audio_file "path/to/audio_file.wav" --output_file "predictions.csv"
+python predict.py --model_path "path/to/saved_model" --audio_file "path/to/audio_file.wav" --output_file "predictions.csv"
 ```
 
 - `--model_path`: Path to the saved TensorFlow model file.
