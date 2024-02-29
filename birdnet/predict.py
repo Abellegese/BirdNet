@@ -328,3 +328,19 @@ class Evaluation(BaseEvaluation):
                 result.append(run)
             expect = v + step
         return result
+
+@click.command()
+@click.option('--model_path', prompt='Path to model', help='Path to the saved TensorFlow model file.')
+@click.argument('audio_file', prompt='path to the files', help='it is the list of the test.wav files directry')
+def evaluate_audio(model_path, audio_file):
+    """
+    Evaluate an audio file using a trained model.
+    """
+    # Initialize EvaluationPipeline
+    pipeline = EvaluationPipeline(model_path)
+
+    # Perform evaluation
+    pipeline.evaluate(audio_file)
+
+if __name__ == '__main__':
+    evaluate_audio()
