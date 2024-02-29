@@ -82,7 +82,7 @@ Visualizes spectrograms of audio signals with their corresponding labels.
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from bird_classifier.utils import audio_to_spectrogram, visualize
+from birdnet.utils import audio_to_spectrogram, visualize
 
 # Load audio data
 # Y: The training data
